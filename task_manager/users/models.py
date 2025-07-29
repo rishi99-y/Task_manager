@@ -7,7 +7,6 @@ class User(AbstractUser):
     last_name = models.CharField(max_length=30)
     created_at = models.DateTimeField(auto_now_add=True)
     updated_at = models.DateTimeField(auto_now=True)
-    groups = models.ManyToManyField(Group,verbose_name=_('groups'),blank=True,related_name='customuser_set')
 
     USERNAME_FIELD = 'email'
     REQUIRED_FIELDS = ['username', 'first_name', 'last_name']
